@@ -1,0 +1,9 @@
+.usersbox {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.usersbox > div{
+    width: 40%;
+    padding: 10px;
+}
