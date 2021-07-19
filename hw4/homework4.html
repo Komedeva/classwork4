@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // - створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
+  function random(count, max) {
+    const array = [];
+    for (let i = 0; i < count; i++) {
+      array.push(Math.floor(Math.random() * max));
+    }
+    return array;
+  }
+  console.log(random(23,45,68));
+  // - Змінти попередню функцію, щоб діапазон можна було визначити через аргументи.
+
+  function random1(count, max) {
+      const array = [];
+      for (let i = 0; i < count; i++) {
+          array.push(Math.floor(Math.random() * max));
+      }
+      return array;
+  }
+  console.log(random(1,2));
+
+  // - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. Відсортувати його за допомоги sort
+
+// let number = Math.ceil(Math.random() *100);
+//
+// console.log(number)
+//   function random(count) {
+//       const array = [];
+//       for (let i = 0; i < count; i++) {
+//           array.push(Math.floor(Math.random() * 100));
+//       }
+//       return array;
+//   }
+//   console.log(random(20));
+  let randomArray = Array.from({length: 10}, () => Math.floor(Math.random() * 17));
+
+  let sort = randomArray.sort( function (a,b){
+      return a - b;
+  });
+
+  // - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень. відфільтрувати
+  // його за допомоги filter, за лишивши тільки парні числа
+
+  let numbers= [44,55,88,99,11,22,33,90,100,66,77,];
+  let numberhdhfd= numbers.filter (function (value){
+      if (value %2 === 0) {
+          return true
+      } else {
+      return false
+      }
+  });
+  let sort1= numbers.sort(function (current, next){
+      return current - next;
+  });
+  console.log(sort1);
+  console.log(numbers);
+
+  // за допомоги map та колбеку перетворити всі об'єкти в масиві на срінгові.
+let map= numbers.map (function (item){
+    return item + '!';
+});
+console.log(map);
+
+  // - Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
+  let user = {
+      id: 25,
+      name: 'Jany',
+      surname: 'Juice',
+      email: 'jannyyyy@gmail.com',
+      phone: '0672828287',
+  };
+      function User(id,name,surname, email,phone) {
+      this.name= name;
+      this.surname= surname;
+      this.email = email;
+      this.phone= phone;
+  }
+      console.log(user)
+      let user1 = new User ('Lilya')
+
+  // створити пустий масив, наповнити його 10 об'єктами new User(....)
+  let users = [
+      new User(1,"Max","Popov","sabaka@mail.com","09854321"),
+      new User(2,"Anya","Like","likeee@mail.com","09456322"),
+      new User(3, "Olya","Nuje", "olya.nuje@gmail.com", '097377277'),
+      new User(4,"Maximka","Novanow","luxary@mail.com","0986759763"),
+      new User(5,"Lybov","Lalala","lalaka@mail.com","09763821"),
+      new User(6,"Kiko","God","god@mail.com","045678721"),
+      new User(7,"Anya","Fruk","fruk@mail.com","09854321"),
+      new User(8,"Orec","Sage","orest@mail.com","09854675"),
+      new User(9,"Orest","Sally","orsal@mail.com","09854675"),
+      new User(10,"Luka","Spiderman","spiderman@mail.com","098545674"),
+  ];
+console.log(users)
+
+  // Взяти масив цей  User[] та: Відфільтрувати , залишивши тільки об'єкти з парними id (filter) та Відсортувати його по id. по зростанню (sort)
+  // let usersArray = [
+  //     new User(1),
+  //     new User(2),
+  //     new User(3),
+  //     new User(4),
+  //     new User(5),
+  //     new User(6),
+  //     new User(7),
+  //     new User(8),
+  //     new User(9),
+  //     new User(10),
+  // ];
+  let users12 = [
+      new User(1,"Max","Popov","sabaka@mail.com","09854321"),
+      new User(2,"Anya","Like","likeee@mail.com","09456322"),
+      new User(3, "Olya","Nuje", "olya.nuje@gmail.com", '097377277'),
+      new User(4,"Maximka","Novanow","luxary@mail.com","0986759763"),
+      new User(5,"Lybov","Lalala","lalaka@mail.com","09763821"),
+      new User(6,"Kiko","God","god@mail.com","045678721"),
+      new User(7,"Anya","Fruk","fruk@mail.com","09854321"),
+      new User(8,"Orec","Sage","orest@mail.com","09854675"),
+      new User(9,"Orest","Sally","orsal@mail.com","09854675"),
+      new User(10,"Luka","Spiderman","spiderman@mail.com","098545674"),
+  ];
+  let usersArraySort = users12.filter(function (even){
+      return even.id % 2 === 0
+  }).sort(function (value1,value2){
+      return value1.id - value2.id
+  })
+
+  console.log(usersArraySort);
+
+  let randomArray8 =  Math.floor(Math.random() * 32)
+  console.log(randomArray8);
+  let users31 = [
+
+  ];
+
+</script>
+</body>
+</html>
