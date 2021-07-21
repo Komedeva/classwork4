@@ -104,8 +104,8 @@ for (let i=0; i<array4.length;i++)
 
 let array5= [23, true, 'cat', false, 3456, 'dog', true, 777, 'Harry Potter', 456 ]
 for (let i=0; i<array5.length;i++)
-    if (typeof array5[i] ==="number")
-        console.log(array5[i]);
+    if (typeof array4[i] ==="number")
+        console.log(array4[i]);
 
 // - Створити масив з 10 елементів числового, стрічкового і булевого типу. За допомогою if та typeof вивести тільки рядкові елементи
 let array6= [23, true, 'cat', false, 3456, 'dog', true, 777, 'Harry Potter', 456 ]
