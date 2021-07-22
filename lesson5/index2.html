@@ -5,17 +5,21 @@
     <title>hw5</title>
 </head>
 <body>
-<!--<div class="target">-->
-<!--Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate iusto laudantium necessitatibus non quasi rerum-->
-<!--  veniam voluptas. Cupiditate doloribus harum ipsam nihil nostrum praesentium tenetur. Ipsa magni ratione sit temporibus!-->
-<!--</div>-->
-<!--<ul class="menu">-->
-<!--  <li>item</li>-->
-<!--  <li>item</li>-->
-<!--  <li>item</li>-->
-<!--  <li>item</li>-->
-<!--  <li>item</li>-->
-<!--</ul>-->
+<form id='a' name="b">
+    <input type="text" name="username">
+    <input type="password" name="password">
+    <button>lod in</button>
+</form>
+<p class="fc_rules">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nulla odit sint tenetur! Consequuntur delectus
+    dolor dolore eos, itaque nihil numquam obcaecati pariatur recusandae repellat sapiente tempore ullam voluptas voluptatem?
+</p><p class="fc_rules">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nulla odit sint tenetur! Consequuntur delectus
+    dolor dolore eos, itaque nihil numquam obcaecati pariatur recusandae repellat sapiente tempore ullam voluptas voluptatem?
+</p><p class="fc_rules">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus nulla odit sint tenetur! Consequuntur delectus
+    dolor dolore eos, itaque nihil numquam obcaecati pariatur recusandae repellat sapiente tempore ullam voluptas voluptatem?
+</p>
 <p>
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias amet, commodi cum dignissimos, eius et eveniet
   illum iste nemo omnis provident quidem recusandae tempora ut veniam voluptas voluptate voluptatibus!Lorem ipsum dolor
@@ -27,8 +31,8 @@
   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, nobis!
 </p>
 
-<a id="rules click shoko">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt, nobis!
+<a id="click shoko">
+   Incidunt, nobis!
 </a>
 
 <p id="content">
@@ -37,6 +41,12 @@
 </p>
 
 <script>
+    let form= document.forms.a;
+    console.log(document.forms.a);
+    console.log(form);
+    console.log(document.forms.b);
+
+
   // - Напишіть код,  який за допомоги document.getElementById або document.getElementsByClassName або document.getElementsByTagName :
   // -- отримує текст з параграфа з id "content"
   let text= document.getElementById('content')
@@ -68,11 +78,31 @@
   console.log(pList2);
   // або
   let childNotes=document.body.children
-  console.log(childNotes);
+  console.log(childNotes)
   // -- отримати всі елементи з класом fc_rules. визначити їм 2 події "клік", одна виводить текст елементу, інша довільний якесь
+    rules1.addEventListener('input', function (){`
+    text.innerText= this.value;
+    `});
+  console.log(['dhuwhwbwiim'])
+    rules1.addEventListener('submit', function (){`
+    text.innerText= this.value;
+    `});
+  // let buttonElement = document.createElement('button');
+  // buttonElement.innerText= 'like'
+  //   buttonElement.onclick= function (){
+  //     localStorage.setItem('paragraph', JSON.stringify(paragraph))
+  //
+  //   }
+  // btn.onclick= function (){
+  //     window.location.reload();
+  // };
 
   // -- поміняти колір тексту у всіх елементів fc_rules на червоний
-
+    let pList90 = document.getElementsByTagName ('p');
+    console.log(pList90);
+    for (const pListElement of pList90) {
+        pListElement.style.color = 'salmon';
+    }
 </script>
 
 </body>
