@@ -46,10 +46,11 @@ fetch(`https://jsonplaceholder.typicode.com/comments`)
             let title = document.createElement('h2');
             title.innerText=  comment.id
             div3.append(title);
+
             let btn = document.createElement('button');
             btn.innerText = 'details';
             btn.onclick = function () {
-                fetch(`https://jsonplaceholder.typicode.com/comments`)
+                fetch(`https://jsonplaceholder.typicode.com/${comment.postId}comments`)
                     .then(value => value.json())
                     .then(value => {
                         console.log(value);
