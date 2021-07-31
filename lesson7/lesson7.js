@@ -333,7 +333,7 @@ const start = async ()=>{
     console.log(await friends1());
     console.log(await bed1());
 }
-start()
+start();
 
 
 
